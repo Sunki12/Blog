@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=UTF-8">
+    <title>regist</title>
+</head>
+
+<body>
+<h1>注册</h1>
+<form method = 'post'>
+    {% csrf_token %}
+    {{uf.as_p}}
+    {% for field in form %}
+        {{ field.label }}: {{ field }}
+    {% endfor %}
+    <input type="submit" value = "regist">
+</form>
+
+<br>
+<a href="/login/">登陆</a>
+</body>
+</html>
